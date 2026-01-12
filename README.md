@@ -63,7 +63,7 @@ Copiar código
 ### Passos
 
 ```bash
-git clone https://github.com/jhonnn-ny/azure-test.git
+git clone https://github.com/jhonnn-ny/azure-ValidadorCPF-DIO.git
 cd azure-test
 dotnet build
 func start
