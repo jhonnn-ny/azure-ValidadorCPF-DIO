@@ -19,5 +19,14 @@ O objetivo principal é validar conceitos como:
 - **Trigger:** HTTP Trigger  
 - **Ferramentas:**  
   - Azure Functions Core Tools  
-  - Azure CLI  
+  - Azure CLI
 
+  
+azure-test/
+├── httpValidaCpf.cs # Azure Function (HTTP Trigger)
+├── httpValidaCpf.csproj # Configuração do projeto .NET
+├── host.json # Configuração global da Function App
+├── local.settings.json # Configurações locais (não versionar secrets)
+├── deploy.zip # Pacote para deploy manual
+├── .gitignore
+└── README.md
