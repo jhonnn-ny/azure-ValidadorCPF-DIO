@@ -38,3 +38,47 @@ azure-test/
 
 └── README.md
 
+## ⚙️ Funcionamento da Function
+
+- A função é acionada via **requisição HTTP**
+- Recebe parâmetros via **query string ou body**
+- Executa lógica de validação (ex: CPF)
+- Retorna resposta HTTP (`200`, `400`, etc.) conforme o resultado
+
+Fluxo simplificado:
+
+Client → HTTP Request → Azure Function → Lógica de validação → HTTP Response
+
+bash
+Copiar código
+
+## ▶️ Execução Local
+
+### Pré-requisitos
+
+- .NET SDK 6.0 ou superior  
+- Azure Functions Core Tools  
+- Node.js (dependência do Core Tools)
+
+### Passos
+
+```bash
+git clone https://github.com/jhonnn-ny/azure-test.git
+cd azure-test
+dotnet build
+func start
+A função ficará disponível em:
+
+bash
+Copiar código
+http://localhost:7071/api/httpValidaCpf
+Exemplo de teste com curl:
+
+bash
+Copiar código
+curl "http://localhost:7071/api/httpValidaCpf?cpf=12345678909"
+☁️ Deploy no Azure
+Deploy via Azure Functions Core Tools
+bash
+Copiar código
+func azure functionapp publish <NOME_DA_FUNCTION_APP>
